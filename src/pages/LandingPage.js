@@ -15,7 +15,7 @@ function LandingPage() {
   }, []);
 
   const fetchPosts = (start) => {
-    fetch(`${process.env.API_URL}indexPage?start=${start}`)
+    fetch(`${process.env.REACT_APP_API_URL}indexPage?start=${start}`)
       .then((res) => res.json())
       .then((data) => {
         if (data.posts && data.posts.length > 0) {
